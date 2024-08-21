@@ -1,0 +1,10 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', '[Artificial Registry Image URL]', '.']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', '[Artificial Registry Image URL]']
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: 'gcloud'
+  args: ['run', 'deploy', '[Cloud Run Name]', '--image', '[Artificial Registry Image URL]', '--platform', 'managed', '--region', '[Region]', '--allow-unauthenticated']
+images:
+- '[Artificial Registry Image URL]'
