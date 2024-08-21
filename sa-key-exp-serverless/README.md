@@ -1,4 +1,4 @@
-## **MSP-Python-SAkeyExpirationAlarm**
+## **SAkeyExpirationAlarm**
 
 ### 개요
 - 목적
